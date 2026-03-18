@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B298991A-C065-4CD2-13CF-CCB70735499A}</ProjectGuid>
+    <RootNamespace>cpp_chicken_tracking</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <VCToolsVersion>14.34.31933</VCToolsVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>C:\dev\TensorRT-10.3.0.26\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ExecutablePath>C:\dev\TensorRT-10.3.0.26\bin;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>C:\dev\opencv_final_build\x64\vc17\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\dev\opencv_final_build\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\dev\Build\install\include;C:\dev\TensorRT-10.3.0.26\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;nvinfer_10.lib;nvonnxparser_10.lib;cublas.lib;cublasLt.lib;cudart.lib;opencv_aruco4120d.lib;opencv_bioinspired4120d.lib;opencv_calib3d4120d.lib;opencv_ccalib4120d.lib;opencv_core4120d.lib;opencv_datasets4120d.lib;opencv_dnn4120d.lib;opencv_dnn_objdetect4120d.lib;opencv_dnn_superres4120d.lib;opencv_dpm4120d.lib;opencv_face4120d.lib;opencv_features2d4120d.lib;opencv_flann4120d.lib;opencv_fuzzy4120d.lib;opencv_gapi4120d.lib;opencv_hfs4120d.lib;opencv_highgui4120d.lib;opencv_imgcodecs4120d.lib;opencv_imgproc4120d.lib;opencv_img_hash4120d.lib;opencv_intensity_transform4120d.lib;opencv_line_descriptor4120d.lib;opencv_mcc4120d.lib;opencv_ml4120d.lib;opencv_objdetect4120d.lib;opencv_optflow4120d.lib;opencv_phase_unwrapping4120d.lib;opencv_photo4120d.lib;opencv_plot4120d.lib;opencv_quality4120d.lib;opencv_rapid4120d.lib;opencv_reg4120d.lib;opencv_rgbd4120d.lib;opencv_saliency4120d.lib;opencv_shape4120d.lib;opencv_signal4120d.lib;opencv_stereo4120d.lib;opencv_stitching4120d.lib;opencv_structured_light4120d.lib;opencv_superres4120d.lib;opencv_surface_matching4120d.lib;opencv_text4120d.lib;opencv_tracking4120d.lib;opencv_video4120d.lib;opencv_videoio4120d.lib;opencv_videostab4120d.lib;opencv_wechat_qrcode4120d.lib;opencv_xfeatures2d4120d.lib;opencv_ximgproc4120d.lib;opencv_xobjdetect4120d.lib;opencv_xphoto4120d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\dev\Build\install\lib;C:\dev\TensorRT-10.3.0.26\lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Include>C:\dev\TensorRT-10.3.0.26\include;%(Include)</Include>
+    </CudaCompile>
+    <CudaLink>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\include;$(ProjectDir)include;C:\dev\eigen-5.0.0;$(ProjectDir);$(CUDA_PATH)\include;C:\dev\TensorRT-10.3.0.26\include;C:\dev\opencv_final_build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;nvinfer_10.lib;nvonnxparser_10.lib;cublas.lib;cublasLt.lib;cudart.lib;opencv_world4140.lib;opencv_img_hash4140.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\dev\Build\install\lib;C:\dev\TensorRT-10.3.0.26\lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Include>C:\dev\TensorRT-10.3.0.26\include;C:\dev\opencv_final_build\include;%(Include)</Include>
+      <CodeGeneration>compute_75,sm_75</CodeGeneration>
+      <AdditionalCompilerOptions>
+      </AdditionalCompilerOptions>
+    </CudaCompile>
+    <CudaLink>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\BYTETracker.cpp" />
+    <ClCompile Include="src\kalmanFilter.cpp" />
+    <ClCompile Include="src\lapjv.cpp" />
+    <ClCompile Include="src\STrack.cpp" />
+    <ClCompile Include="src\utils.cpp" />
+    <ClCompile Include="src\YoloInference.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\BYTETracker.h" />
+    <ClInclude Include="include\dataType.h" />
+    <ClInclude Include="include\kalmanFilter.h" />
+    <ClInclude Include="include\lapjv.h" />
+    <ClInclude Include="include\STrack.h" />
+    <ClInclude Include="include\YoloInference.h" />
+    <ClInclude Include="Int8Calibrator.h" />
+    <ClInclude Include="MaskMathGPU.cuh" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="chicken_seg.onnx" />
+    <None Include="chicken_seg_named.onnx" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="MaskMathGPU.cu" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.2.targets" />
+  </ImportGroup>
+</Project>
