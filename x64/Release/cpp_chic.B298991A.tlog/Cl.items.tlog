@@ -1,8 +1,0 @@
-C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\main.cpp;C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\x64\Release\main.obj
-C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\pch.cpp;C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\x64\Release\pch.obj
-C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\src\BYTETracker.cpp;C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\x64\Release\BYTETracker.obj
-C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\src\kalmanFilter.cpp;C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\x64\Release\kalmanFilter.obj
-C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\src\lapjv.cpp;C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\x64\Release\lapjv.obj
-C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\src\STrack.cpp;C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\x64\Release\STrack.obj
-C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\src\utils.cpp;C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\x64\Release\utils.obj
-C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\src\YoloInference.cpp;C:\dev\cpp_chicken_tracking\cpp_chicken_tracking\x64\Release\YoloInference.obj
