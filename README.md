@@ -1,6 +1,6 @@
 # PoultryHealth-AI: Real-Time TensorRT Segmentation & Tracking Pipeline
 
-![Tracked Chickens](Chickens_gif_2.gif)
+![Tracked Chickens](Chickens_gif_2.gif) ![Email Alert](https://github.com/user-attachments/assets/c6eb8e50-8eda-455d-926c-baee37810db0)
 
 A low latency, production-grade computer vision pipeline designed to track, segment, and diagnose poultry health in real-time. 
 Builtusing python and C++ with custom CUDA kernels, this system bypasses traditional CPU bottlenecks to achieve maximum hardware utilization on edge devices.
